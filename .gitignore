@@ -1,0 +1,5 @@
+*.o
+*.exe
+sfml-app
+.DS_Store
+Thumbs.db

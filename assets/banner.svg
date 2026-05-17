@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <defs>
+    <style>
+      .bg { fill: #000; }
+      .scan { fill: url(#scanpat); opacity: 0.04; }
+
+      .title {
+        font-family: Impact, 'Arial Narrow', sans-serif;
+        font-size: 88px;
+        fill: #fff;
+        letter-spacing: 14px;
+        text-anchor: middle;
+        animation: flicker 8s ease-in-out infinite;
+      }
+      @keyframes flicker {
+        0%,100% { opacity: 1; }
+        92% { opacity: 1; }
+        93% { opacity: 0.7; }
+        94% { opacity: 1; }
+        96% { opacity: 0.85; }
+        97% { opacity: 1; }
+      }
+
+      .sub {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        fill: #aaa;
+        letter-spacing: 4px;
+        text-anchor: middle;
+        font-weight: 700;
+      }
+      .loc {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        fill: #555;
+        letter-spacing: 3px;
+        text-anchor: middle;
+      }
+      .tag {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        fill: #333;
+        letter-spacing: 4px;
+        text-anchor: middle;
+        font-weight: 700;
+      }
+
+      .div-line { stroke: #222; stroke-width: 1; }
+      .corner { stroke: #222; stroke-width: 1; fill: none; }
+
+      .p { fill: #fff; animation: pdrift 6s ease-in-out infinite; }
+      .p1  { animation-duration: 5.1s; animation-delay: 0s; }
+      .p2  { animation-duration: 6.7s; animation-delay: -1.2s; }
+      .p3  { animation-duration: 4.8s; animation-delay: -2.4s; }
+      .p4  { animation-duration: 7.2s; animation-delay: -0.8s; }
+      .p5  { animation-duration: 5.5s; animation-delay: -3.1s; }
+      .p6  { animation-duration: 6.1s; animation-delay: -1.7s; }
+      .p7  { animation-duration: 4.9s; animation-delay: -4.2s; }
+      .p8  { animation-duration: 7.8s; animation-delay: -0.3s; }
+      .p9  { animation-duration: 5.3s; animation-delay: -2.9s; }
+      .p10 { animation-duration: 6.4s; animation-delay: -1.5s; }
+      @keyframes pdrift {
+        0%   { transform: translate(0px, 0px);  opacity: 0.6; }
+        25%  { transform: translate(3px, -4px); opacity: 0.9; }
+        50%  { transform: translate(-2px,-7px); opacity: 0.5; }
+        75%  { transform: translate(4px, -3px); opacity: 0.8; }
+        100% { transform: translate(0px, 0px);  opacity: 0.6; }
+      }
+
+      .glitch-r {
+        font-family: Impact, 'Arial Narrow', sans-serif;
+        font-size: 88px;
+        fill: #f00;
+        letter-spacing: 14px;
+        text-anchor: middle;
+        opacity: 0;
+        animation: glitch-r 9s steps(1) infinite;
+        clip-path: url(#gtop);
+      }
+      .glitch-b {
+        font-family: Impact, 'Arial Narrow', sans-serif;
+        font-size: 88px;
+        fill: #0ff;
+        letter-spacing: 14px;
+        text-anchor: middle;
+        opacity: 0;
+        animation: glitch-b 9s steps(1) infinite;
+        clip-path: url(#gbot);
+      }
+      @keyframes glitch-r {
+        0%,89%,100% { opacity:0; transform:translate(0,0); }
+        90%  { opacity:0.6; transform:translate(-3px, 1px); }
+        91%  { opacity:0; }
+        93%  { opacity:0.4; transform:translate( 2px,-1px); }
+        94%  { opacity:0; }
+      }
+      @keyframes glitch-b {
+        0%,89%,100% { opacity:0; transform:translate(0,0); }
+        90%   { opacity:0.5; transform:translate( 3px, 2px); }
+        91.5% { opacity:0; }
+        93.5% { opacity:0.3; transform:translate(-2px, 1px); }
+        94.5% { opacity:0; }
+      }
+
+      .seg {
+        fill: none; stroke: #fff; stroke-width: 1;
+        opacity: 0.05;
+        animation: crawl 20s linear infinite;
+      }
+      @keyframes crawl {
+        0%   { transform: translateX(200px); }
+        100% { transform: translateX(-700px); }
+      }
+    </style>
+
+    <pattern id="scanpat" x="0" y="0" width="2" height="4" patternUnits="userSpaceOnUse">
+      <rect width="2" height="2" fill="rgba(255,255,255,0.05)"/>
+    </pattern>
+    <clipPath id="gtop"><rect x="0" y="100" width="900" height="50"/></clipPath>
+    <clipPath id="gbot"><rect x="0" y="160" width="900" height="50"/></clipPath>
+  </defs>
+
+  <rect class="bg" width="900" height="320"/>
+  <rect class="scan" width="900" height="320"/>
+
+  <!-- crawling centipede (faint) -->
+  <g class="seg">
+    <circle cx="920" cy="302" r="5"/><circle cx="938" cy="302" r="5"/>
+    <circle cx="956" cy="302" r="5"/><circle cx="974" cy="302" r="5"/>
+    <circle cx="992" cy="302" r="5"/><circle cx="1010" cy="302" r="5"/>
+    <circle cx="1028" cy="302" r="5"/><circle cx="1046" cy="302" r="5"/>
+    <circle cx="1064" cy="302" r="5"/><circle cx="1082" cy="302" r="5"/>
+    <circle cx="1100" cy="302" r="5"/><circle cx="1118" cy="302" r="5"/>
+  </g>
+
+  <!-- corners -->
+  <polyline class="corner" points="12,32 12,12 32,12"/>
+  <polyline class="corner" points="868,12 888,12 888,32"/>
+  <polyline class="corner" points="12,288 12,308 32,308"/>
+  <polyline class="corner" points="868,308 888,308 888,288"/>
+
+  <!-- particles -->
+  <circle class="p p1"  cx="42"  cy="54"  r="1.2" opacity="0.4"/>
+  <circle class="p p2"  cx="118" cy="38"  r="0.8" opacity="0.3"/>
+  <circle class="p p3"  cx="860" cy="48"  r="1.1" opacity="0.35"/>
+  <circle class="p p4"  cx="790" cy="72"  r="0.7" opacity="0.25"/>
+  <circle class="p p5"  cx="58"  cy="220" r="1.0" opacity="0.3"/>
+  <circle class="p p6"  cx="840" cy="200" r="0.9" opacity="0.35"/>
+  <circle class="p p7"  cx="160" cy="270" r="1.3" opacity="0.25"/>
+  <circle class="p p8"  cx="750" cy="265" r="0.8" opacity="0.3"/>
+  <circle class="p p9"  cx="200" cy="80"  r="1.0" opacity="0.2"/>
+  <circle class="p p10" cx="680" cy="60"  r="1.2" opacity="0.3"/>
+
+  <!-- course tag -->
+  <text class="tag" x="450" y="76">CS1002  ·  PROGRAMMING FUNDAMENTALS  ·  FALL 2023</text>
+
+  <!-- glitch layers -->
+  <text class="glitch-r" x="450" y="178">CENTIPEDE</text>
+  <text class="glitch-b" x="450" y="178">CENTIPEDE</text>
+
+  <!-- title -->
+  <text class="title"   x="450" y="178">CENTIPEDE</text>
+
+  <!-- divider -->
+  <line class="div-line" x1="200" y1="196" x2="700" y2="196"/>
+
+  <!-- subtitle -->
+  <text class="sub" x="450" y="224">C++  ·  SFML  ·  ARCADE SHOOTER  ·  NO ENGINE</text>
+  <text class="loc" x="450" y="248">FAST NUCES  ·  ISLAMABAD  ·  github.com/ruhan-k-dev</text>
+</svg>
