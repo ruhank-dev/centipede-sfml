@@ -158,5 +158,5 @@ g++ Centipede.o -o sfml-app -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-sy
 ---
 
 <div align="center">
-<sub>github.com/ruhan-k-dev</sub>
+<sub>github.com/ruhank-dev</sub>
 </div>
