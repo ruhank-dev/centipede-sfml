@@ -149,7 +149,7 @@ g++ Centipede.o -o sfml-app -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-sy
 | | Name | Roll No. |
 |--|------|----------|
 | `>` | **Ruhan Kamran** | 23i-0062 |
-| `>` | **Abubakar** | 23i-0515 |
+
 
 **CS1002 — Programming Fundamentals · Fall 2023 · FAST NUCES Islamabad**
 
